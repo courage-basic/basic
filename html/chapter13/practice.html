@@ -2,5 +2,55 @@
 <html lang="ja">
 <body>
   <p>hello, world!</p>
+  <label for=”product”>対象商品</label>
+  <select id=”product”>
+    <option value=””>選択してください</option>
+    <option value=”ProductA”>Product A</option>
+    <option value=”ProductB”>Product B</option>
+    <option value=”ProductC”>Product C</option>
+    <option value=”ProductD”>Product D</option>
+  </select>
+
+  <label for=”product2”>対象商品</label>
+  <select id=”product2”>
+    <option value=””>選択してください</option>
+    <option value=”ProductA”>Product A</option>
+    <option value=”ProductB” selected>Product B</option>
+    <option value=”ProductC”>Product C</option>
+    <option value=”ProductD”>Product D</option>
+  </select>
+<br>
+  <input type="text" name="name" list="sample">
+  <datalist id="sample">
+    <option value=”ProductA”>
+    <option value=”ProductB”>
+    <option value=”ProductC”>
+  </datalist>
+<br>
+  <input type="text" name="name" list="exlist">
+  <datalist id="exlist">
+    <option value="サンプル1">
+    <option value="サンプル2">
+    <option value="サンプル3">
+  </datalist>
+<br>
+  <input type="text" name="name" list="sample1">
+  <datalist id="sample1">
+    <option value="リスト項目1">
+    <option value="リスト項目2">
+    <option value="リスト項目3">
+  </datalist>
+<br>
+  <input type="text" name="name" placeholder="ダブルクリックしてください" list="sample2" size="30">
+    <datalist id="sample2-2">
+      <option value="http://www.google.co.jp/"></option>
+      <option value="http://www.yahoo.co.jp/"></option>
+      <option value="http://www.rakuten.co.jp/"></option>
+    ★次の3つから選んでください。<br>
+    http://www.google.co.jp/<br>
+    http://www.yahoo.co.jp/<br>
+    http://www.rakuten.co.jp/<br>
+    </datalist>
+
 </body>
 </html>
