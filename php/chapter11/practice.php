@@ -6,6 +6,7 @@
 $time_zone = "night";
 
 // 時間帯ごとに挨拶を変えて表示する
+// 「初期値」と比較して、あってるかどうかのざっくり判定
 
 switch ($time_zone) {
     case ("morning"):
