@@ -9,14 +9,17 @@ try {
   $db = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+  // var_dump ("テスト");
+  // die();
+
 // ※ここにコードを書く
-  // var_dump ("test");
-  // $name = $_POST["name"];
-  // $mail = $_POST["mail"];
-  // $claim = $_POST["claim"];
-  //
-  // $stmt = $db->prepare("insert into user (name, mail, claim) values (?, ?, ?)");
-  // $stmt->execute([$name, $mail, $claim]);
+  var_dump ("test");
+  $name = $_POST["name"];
+  $mail = $_POST["mail"];
+  $claim = $_POST["claim"];
+
+  $stmt = $db->prepare("insert into user (name, mail, claim) values (?, ?, ?)");
+  $stmt->execute([$name, $mail, $claim]);
 
 } catch (PDOException $e) {
   // $db->rollback();
@@ -34,15 +37,15 @@ try {
     <title>問い合わせフォーム</title>
   </head>
   <body>
-    <form action="" method="post">
-      <p>名前：<br>
+    <form action="complete.php" method="post">
+      <p>名前：
         <?php echo $name; ?>
-      <p>メールアドレス：<br>
+      <p>メールアドレス：
         <?php echo $mail; ?>
-      <p>お問い合わせ内容：<br>
+      <p>お問い合わせ内容：
         <?php echo $claim; ?>
       <br>
-      <button type="submit" name="send">送信</button>
+      <input type="submit" name="send" value="送信">
     </form>
   </body>
 

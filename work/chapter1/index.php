@@ -13,13 +13,13 @@ echo "HELLO WORLD!";
   <body>
     <form action="confirm.php" method="post">
       <p>名前：<br>
-      <input type="text" name="name" size="50"></input>
+      <input type="text" name="name" size="50">
       <p>メールアドレス：<br>
-      <input type="text" name="mail" size="50"></input>
+      <input type="text" name="mail" size="50">
       <p>お問い合わせ内容：<br>
       <textarea name="claim" cols="50" rows="8"></textarea>
       <br>
-      <button type="submit" name="send">送信</button>
+      <input type="submit" name="send" value="確認">
     </form>
   </body>
 
