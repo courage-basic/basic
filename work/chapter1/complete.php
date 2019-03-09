@@ -5,25 +5,10 @@
     <title>問い合わせフォーム</title>
   </head>
   <body>
-    <?php
-    mb_language("Japanese");
-    mb_internal_encoding("UTF-8");
+    <p>送信しました</p>
+    <form action="index.php" method="post">
+      <input type="submit" name="back" value="戻る">
+    </form>
 
-    $name = $_POST["name"];
-    $mail = $_POST["mail"];
-    $claim = $_POST["claim"];
-
-    var_dump ($name);
-    var_dump ($mail);
-    var_dump ($claim);
-
-    if(
-        mb_send_mail($mail, "お問い合わせフォームからの送信です", "お名前：".$name."お問い合わせ内容：".$claim."お問い合わせ結果："."結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果結果")
-      )  {
-            echo "メールを送信しました";
-         } else {
-            echo "メールの送信に失敗しました";
-           };
-      ?>
     </body>
   </html>
